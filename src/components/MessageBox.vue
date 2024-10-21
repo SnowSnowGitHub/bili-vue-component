@@ -2,19 +2,19 @@
   <div class="wrap">
     <div class="msg">{{ msg }}</div>
     <div class="foot">
-      <div class="btn confirm" @click="emits('confirm')">确定</div>
-      <div class="btn cancel" @click="emits('cancel')">取消</div>
+      <div class="btn confirm" @click="emit('confirm')">确定</div>
+      <div class="btn cancel" @click="emit('cancel')">取消</div>
     </div>
   </div>
 </template>
 
 <script setup>
-  const emits = defineEmits(["confirm", "cancel"])
+  const emit = defineEmits(["confirm", "cancel"])
   // const confirm = () => {
-  //   emits("confirm")
+  //   emit("confirm")
   // }
   // const cancel = () => {
-  //   emits("confirm")
+  //   emit("confirm")
 
   const props = defineProps({
     msg: {

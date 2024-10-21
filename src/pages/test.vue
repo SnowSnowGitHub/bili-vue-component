@@ -7,8 +7,8 @@
 <script setup>
   import { showMsg } from "@/utils/message"
   const showModal = () => {
-    showMsg("123213", (close) => {
-      close() //close名字问题判断
+    showMsg("123213", () => {
+      console.log("点击按钮后你要做些什么")
     })
   }
 </script>
